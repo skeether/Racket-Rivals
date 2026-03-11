@@ -23,7 +23,7 @@ local Settings = {
     SpeedHack       = false,
     JumpHack        = false,
     ESPPlayers      = false,
-    SpeedMultiplier = 2.77,
+    SpeedMultiplier = 2.077,
     JumpMultiplier  = 0.775,
 }
 
@@ -695,4 +695,5 @@ end)
 
 
 print("loaded")
+
 
