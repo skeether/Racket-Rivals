@@ -23,8 +23,8 @@ local Settings = {
     SpeedHack       = false,
     JumpHack        = false,
     ESPPlayers      = false,
-    SpeedMultiplier = 2077,
-    JumpMultiplier  = 775,
+    SpeedMultiplier = 2.77,
+    JumpMultiplier  = 0.775,
 }
 
 local function FindBall()
@@ -474,10 +474,10 @@ if Drawing then
 
     local sep = CD("Line"); sep.Color = C.sep; sep.Thickness = 1; sep.Visible = true
 
-    local speedRow = makeSliderRow(1, "Speed", 1.0, 3000.0, Settings.SpeedMultiplier,
+    local speedRow = makeSliderRow(1, "Speed", 1.0, 10.0, Settings.SpeedMultiplier,
         function(v) Settings.SpeedMultiplier = v; if Settings.SpeedHack then UpdateSpeed() end end)
 
-    local jumpRow = makeSliderRow(2, "Jump", 0.0, 1000.0, Settings.JumpMultiplier,
+    local jumpRow = makeSliderRow(2, "Jump", 0.0, 10.0, Settings.JumpMultiplier,
         function(v) Settings.JumpMultiplier = v; if Settings.JumpHack then UpdateJump() end end)
 
     local tpBg,  tpLbl,  tpRefresh,  tpHit  = makeBtn(4, "Teleport to Ball  [R]")
@@ -695,3 +695,4 @@ end)
 
 
 print("loaded")
+
